@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>I love U</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="favicon_io/favicon-16x16.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <div class="principal-box">
+
+        <div class="box">
+
+            <h1>Quer namorar comigo?</h1>
+
+            <img id="img01" src="https://cdn-icons-png.flaticon.com/256/6727/6727043.png" alt="">
+
+            <div id="div-btn">
+
+                <button onclick="page()">SIM  &#128571;</button>
+
+                <button id="no" onmouseover="fuga()" onclick="fuga()">NÃO &#128575;</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+        function fuga(){
+
+            var botao_n = document.getElementById('no');
+
+
+
+            var ljanela = window.innerWidth;
+
+            var ajanela = window.innerHeight;
+
+
+
+            var limitex = ljanela - botao_n.offsetWidth;
+
+            var limitey = ajanela - botao_n.offsetHeight;
+
+
+
+            var aleatoriox = Math.floor(Math.random() * limitex);
+
+            var aleatorioy = Math.floor(Math.random() * limitey);
+
+            
+
+            botao_n.style.position = 'absolute';
+
+            botao_n.style.left = aleatoriox + "px";
+
+            botao_n.style.top = aleatorioy + "px";
+
+        }
+
+
+
+        function page(){
+
+            document.location.href = 'sim.html'
+
+        }
+
+    </script>
+
+</body>
+
+</html>
